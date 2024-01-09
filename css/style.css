@@ -1,0 +1,609 @@
+* {
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 700px;
+  color: white;
+  background-repeat: no-repeat;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position: fixed;
+  color: rgb(0, 0, 0);
+  background-color: rgba(238, 248, 255, 0.469);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+/* Link section to LinkedIn and GitHub profiles */
+#links {
+  margin-left: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+#instagram {
+  height: 20px;
+}
+
+#linkedin {
+  height: 24px;
+}
+
+#github {
+  height: 21px;
+}
+
+nav {
+  list-style: none;
+  width: 450px;
+  margin-right: 100px;
+  margin-left: 100px;
+  position: relative;
+  display: inline-flex;
+  justify-content: space-between;
+  font-size: 17px;
+  transition: 0.2s;
+}
+
+nav > li {
+  padding: 2px;
+  padding-right: 6px;
+  padding-left: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+nav > li:active {
+  transform: scale(0.9, 0.9);
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+}
+
+#home {
+  /* background-image: linear-gradient(to bottom right, rgb(0, 86, 178,.5), rgb(98, 250, 255, .5)); */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(210, 237, 255, 0.509)
+    ),
+    url("/images/mountains-and-sky-with-stars-natural-landscape-in-2023-11-27-05-20-31-utc.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  font-family: raleway;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 900px;
+}
+
+h1 {
+  color: rgb(38, 38, 38);
+  font-size: 90px;
+  text-align: center;
+  width: 80%;
+  max-width: 900px;
+  margin: 0px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  font-family: Raleway;
+  transition: 0.2s;
+}
+
+/* Creates the blinking 'text cursor' after name title*/
+#blink {
+  animation: blink 1.5s linear infinite;
+}
+
+@keyframes blink {
+  100% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 1;
+  }
+}
+
+#intro {
+  font-size: 25px;
+  color: rgb(38, 38, 38);
+  text-align: center;
+}
+
+/* Links to the 'about' section from the intro */
+#name-link {
+  cursor: pointer;
+  position: relative;
+  border-radius: 4px;
+  background-color: rgba(237, 248, 255, 0.624);
+}
+
+#name-link:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: rgb(10, 110, 177);
+  transition: width 0.25s ease-out;
+}
+
+#name-link:hover::before {
+  width: 100%;
+}
+
+/* Links to the 'portfolio' section from the intro */
+#stuff-link {
+  cursor: pointer;
+  position: relative;
+  border-radius: 4px;
+  background-color: rgba(237, 248, 255, 0.624);
+}
+
+#stuff-link:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: rgb(10, 110, 177);
+  transition: width 0.25s ease-out;
+}
+
+#stuff-link:hover::before {
+  width: 100%;
+}
+
+#about {
+  background-color: rgb(210, 237, 255);
+  height: 900px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 120px;
+  padding-bottom: 20px;
+  gap: 80px;
+}
+
+#aboutleft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-left: 150px;
+  padding-top: 30px;
+}
+
+#bio > p {
+  color: rgb(38, 38, 38);
+  font-size: 19px;
+  margin-left: 15px;
+  line-height: 1.4;
+}
+
+#bio > h2 {
+  color: rgb(10, 110, 177);
+  font-size: 25px;
+  padding-bottom: 20px;
+  border-bottom: rgba(210, 236, 254, 0.537) solid;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+#bio {
+  position: relative;
+}
+
+#music {
+  position: absolute;
+  height: 35px;
+  opacity: 0.7;
+  left: 25px;
+  top: 35px;
+  transform: rotate(-10deg);
+}
+
+#nerd {
+  position: absolute;
+  height: 40px;
+  opacity: 0.7;
+  right: 22px;
+  top: 28px;
+  transform: rotate(10deg);
+}
+
+#profile-pic {
+  height: 350px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-right: 40px;
+  margin-left: 40px;
+  border: 5px rgba(210, 236, 254, 0.537) solid;
+  box-shadow: 2px 5px 20px 5px rgb(180, 203, 215);
+}
+
+#bio {
+  height: 200px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 500px;
+}
+
+#aboutright {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(244, 250, 253),
+    rgba(181, 225, 255, 0.701)
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 640px;
+  padding: 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 450px;
+  margin-right: 200px;
+}
+
+#aboutright > ul {
+  color: rgb(38, 38, 38);
+  font-size: 25px;
+  list-style-type: none;
+  padding-top: 0px;
+  padding-left: 100px;
+  text-align: center;
+}
+
+#aboutright ul li {
+  padding: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#logo1::before {
+  background-image: url("/images/HTML-5-01.png");
+  background-size: 70px 70px;
+  display: inline-block;
+  position: absolute;
+  left: -86px;
+  top: 5px;
+  width: 70px;
+  height: 70px;
+  content: "";
+}
+
+#logo2::before {
+  background-image: url("/images/CSS-3-01.png");
+  background-size: 70px 70px;
+  display: inline-block;
+  position: absolute;
+  left: -86px;
+  top: 5px;
+  width: 70px;
+  height: 70px;
+  content: "";
+}
+
+#logo3::before {
+  background-image: url("/images/JavaScript-01.png");
+  background-size: 60px 60px;
+  display: inline-block;
+  position: absolute;
+  left: -80px;
+  top: 15px;
+  width: 60px;
+  height: 60px;
+  content: "";
+}
+
+#logo4::before {
+  background-image: url("/images/Wordpress-08.png");
+  background-size: 60px 60px;
+  display: inline-block;
+  position: absolute;
+  left: -80px;
+  top: 15px;
+  width: 60px;
+  height: 60px;
+  content: "";
+}
+
+#logo5::before {
+  background-image: url("/images/SquareSpace-01.png");
+  background-size: 65px 65px;
+  display: inline-block;
+  position: absolute;
+  left: -85px;
+  top: 15px;
+  width: 65px;
+  height: 65px;
+  content: "";
+}
+
+#logo6::before {
+  background-image: url("/images/Adobe-Photoshop-CC-01.png");
+  background-size: 60px 60px;
+  display: inline-block;
+  position: absolute;
+  left: -80px;
+  top: 15px;
+  width: 60px;
+  height: 60px;
+  content: "";
+}
+
+#portfolio {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(210, 237, 255),
+    rgb(250, 253, 255)
+  );
+  height: 1200px;
+  display: flex;
+  justify-content: center;
+}
+
+#portcont {
+  border-top: 1px rgb(38, 38, 38) solid;
+  padding-top: 65px;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px;
+}
+
+.leftprojects {
+  height: 850px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#mainproject {
+  background-color: rgb(38, 38, 38);
+  border: 5px rgba(210, 236, 254) solid;
+  height: 500px;
+  width: 950px;
+  background-image: url("/images/Screen\ Shot\ 2024-01-08\ at\ 6.09.09\ PM.png");
+  background-size: 960px;
+  background-repeat: no-repeat;
+  background-position: -10px 30px;
+  position: relative;
+  border-radius: 20px;
+}
+
+#mainproject::after {
+  content: "";
+  position: absolute;
+  height: 500px;
+  width: 950px;
+  z-index: 2;
+  backdrop-filter: blur(3px) sepia(20%);
+  border-radius: 15px;
+  transition: 0.5s;
+}
+
+#mainproject:hover::after {
+  content: "";
+  position: absolute;
+  height: 500px;
+  width: 950px;
+  z-index: 1;
+  backdrop-filter: none;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+#mainproject::before {
+  content: "HTML, CSS, JavaScript";
+  position: absolute;
+  height: 100px;
+  width: 350px;
+  z-index: 3;
+  background-color: rgba(210, 236, 254);
+  border:5px 5px 5px 0px rgb(38, 38, 38) solid;
+  backdrop-filter: none;
+  color: rgb(38, 38, 38);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 50px;
+}
+
+#btmprojects {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+#btmproject1,
+#btmproject2 {
+  border: 5px rgba(210, 236, 254) solid;
+  border-radius: 15px;
+  background-color: white;
+  height: 300px;
+  width: 450px;
+  position: relative;
+}
+
+#btmproject1::after,
+#btmproject2::after {
+  content: "";
+  position: absolute;
+  height: 300px;
+  width: 450px;
+  z-index: 2;
+  backdrop-filter: blur(3px) sepia(20%);
+  border-radius: 15px;
+  transition: 0.5s;
+}
+
+#btmproject1:hover::after,
+#btmproject2:hover::after {
+  content: "";
+  position: absolute;
+  height: 300px;
+  width: 450px;
+  z-index: 1;
+  backdrop-filter: none;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+#btmproject1::before,
+#btmproject2::before {
+  content: "HTML, CSS, JavaScript";
+  position: absolute;
+  height: 100px;
+  width: 350px;
+  z-index: 3;
+  background-color: rgba(210, 236, 254);
+  border:5px 5px 5px 0px rgb(38, 38, 38) solid;
+  backdrop-filter: none;
+  color: rgb(38, 38, 38);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 50px;
+}
+
+.rightprojects {
+  height: 850px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#sproject1,
+#sproject2,
+#sproject3 {
+  border: 5px rgba(210, 236, 254) solid;
+  border-radius: 15px;
+  background-color: white;
+  height: 250px;
+  width: 400px;
+}
+
+#contact {
+  background-color: rgb(250, 253, 255);
+  color: rgb(38, 38, 38);
+  height: 750px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contactinfo {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contactinfo h2 {
+  font-size: 30px;
+}
+
+#contactlinks {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  width: 350px;
+  height: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#instagrambtm {
+  height: 60px;
+}
+
+#linkedinbtm {
+  height: 70px;
+}
+
+#githubbtm {
+  height: 62px;
+}
+
+#contactinfo h3 {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-size: 22px;
+}
+
+#contactinfo p {
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid;
+}
+
+footer {
+  height: 80px;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+  background-color: rgb(210, 237, 255);
+  position: absolute;
+  bottom: 0;
+}
+
+footer p {
+  font-size: 20px;
+  padding: 10px;
+}
+
+@media (800px <= width <= 1100px) {
+}
+
+@media (601px <= width <= 800px) {
+}
+
+@media (351px <= width <= 600px) {
+}
+
+@media (width <= 350px) {
+}
