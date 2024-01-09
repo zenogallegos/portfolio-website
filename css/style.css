@@ -85,7 +85,7 @@ main {
       rgba(0, 0, 0, 0),
       rgba(210, 237, 255, 0.509)
     ),
-    url("/images/mountains-and-sky-with-stars-natural-landscape-in-2023-11-27-05-20-31-utc.jpg");
+    url(/images/mountains-and-sky-with-stars-natural-landscape-in-2023-11-27-05-20-31-utc.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0px 0px;
